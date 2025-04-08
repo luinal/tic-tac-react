@@ -9,9 +9,6 @@ function Square({ value, onSquareClick }) {
 }
 
 function Board({ xIsNext, squares, onPlay }) {
-    const [xIsNext, setXIsNext] = useState(true);
-    const [squares, setSquares] = useState(Array(9).fill(null));
-
     function handleClick(i) {
         if (squares[i] || calculateWinner(squares)) {
             return;
